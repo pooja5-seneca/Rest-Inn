@@ -30,8 +30,10 @@ const PropertyDescription = () => {
             <div className='prize'>
                 <div className='desc'>
                     <h3>{data[0].name}</h3>
-                    <p>3-star Hotel with outdoor pool, near pigeon point beach</p>
-                    <p className='text-success'>free local cuisines breakfast, free wifi, and free parking &#10003; free airport transfer &#10003; free cancellation</p>
+                    <p>Hotel with indoor salt water pool</p>
+                    <p className='text-success'>Breakfast included,
+                        Free wifi, Free parking available at the hotel,Free airport transfer,Free cancellation </p>
+                    {/* <p className='text-success'>free local cuisines breakfast, free wifi, and free parking &#10003; free airport transfer &#10003; free cancellation</p> */}
                 </div>
             </div>
             <div className='description'>
@@ -42,11 +44,11 @@ const PropertyDescription = () => {
 
                 <div className='information '>
 
-                    <p>3-star Hotel with outdoor pool, near pigeon point beach</p>
+                    <p>Hotel with indoor salt water pool</p>
                     <b>Amenities:</b>
-                    <p className='text-dark'>free local cuisines breakfast &#10003; <br />
-                        free wifi &#10003; <br /> free parking &#10003; <br />free airport transfer &#10003;
-                        <br />free cancellation &#10003;</p>
+                    <p className='text-dark'>Continental, Vegetarian, Vegan, Buffet &#10003; <br />
+                        Free wifi &#10003; <br /> Free parking available at the hotel &#10003; <br />Free airport transfer &#10003;
+                        <br />Free cancellation &#10003;</p>
                 </div>
                 <div className='desc1'>
                     <span className='price'><b>&nbsp; {data[0].Price} &nbsp; &nbsp;</b></span>
@@ -69,23 +71,23 @@ const PropertyDescription = () => {
                 </div>
                 <div className='customerreview'>
                     <div className='customer'>
-                        <p>I and my family enjoyed alot. The staff was very polite and helpful</p>
-                        <p id='date'>jul,8,2020</p>
+                        <p>IThe service was good, place was clean. The view from room was spectecular</p>
+                        <p id='date'>Jan 07,2022</p>
                         <hr />
                     </div>
                     <div className='rating'>
                         <span className="badge bg-success">8.0</span>
                         <span className='text'>
-                            <b>Fabulous</b>
-                            <p>77 verified hotel.com reviews</p>
+                            <b>Lovely Interior</b>
+                            <p>Verified hotel reviews</p>
                         </span>
                     </div>
                     <div className='customer'>
-                        <p>I and my family enjoyed alot. The staff was very polite and helpful</p>
-                        <p id='date'>jul,8,2020</p>
+                        <p>Great hotel with lots of amenities. Very nice outside sitting area and nice large gym with lots of equipment</p>
+                        <p id='date'>Dec 25,2021</p>
                         <hr />
                     </div>
-                    <a href='#'>see all review</a>
+                    <a href='#'>See all review</a>
                 </div>
             </div>
             <br /> <br />
