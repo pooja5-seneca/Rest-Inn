@@ -1,0 +1,17 @@
+.column{
+    height: 430px;
+    width: 320px;
+    padding-left: 3px;
+    .card{
+        width: 18rem;
+        height: 350px;
+        img{
+            height: 250px;
+        }
+    }
+    .card-body{
+        .btn{
+            text-align: center;
+        }
+    }
+}

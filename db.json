@@ -1,0 +1,206 @@
+{
+    "property_list": [
+        {
+            "id": 1,
+            "name": "Condo",
+            "img": "https://drive.google.com/uc?id=10H3ccawWZnwRxL4q_ucpdXK0M6F5ribt",
+            "description": "this is the condo you can look at it",
+            "list": [
+                {
+                    "id": 1,
+                    "name": "Luxurious Condo",
+                    "price": 1300,
+                    "address": "10358 Biscayne",
+                    "img": "https://drive.google.com/uc?id=1N91qsIW7oeg3h7rLKH2sczf-ZM3Ckiy9"
+                },
+                {
+                    "id": 2,
+                    "name": "Lake View Condo",
+                    "price": 1650,
+                    "address": "1211 Chrysler dr",
+                    "img": "https://drive.google.com/uc?id=1yeCCOsrUYYdU3dnXBttGal7h5ot8P2rw"
+                },
+                {
+                    "id": 3,
+                    "name": "Skyscraper Condo",
+                    "price": 1750,
+                    "address": "126 Dundas road",
+                    "img": "https://drive.google.com/uc?id=1JP4DmF0k0M1Bqjef6NPFv3vppWBUZLDT"
+                },
+                {
+                    "id": 4,
+                    "name": "Wood Interior Condo",
+                    "price": 850,
+                    "address": "1300 Blvd east",
+                    "img": "https://drive.google.com/uc?id=1EvEKTKMaNaZ5z_am15hh5U8K7beLYVlk"
+                },
+                {
+                    "id": 5,
+                    "name": "Greenhouse Condo",
+                    "price": 800,
+                    "address": "64 stevenesen road",
+                    "img": "https://drive.google.com/uc?id=10H3ccawWZnwRxL4q_ucpdXK0M6F5ribt"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Resort",
+            "description": "this is the resorts you can look at it",
+            "img": "https://drive.google.com/uc?id=14igx3-Wv5sF16fQ1jBRighBGvFXYpyGq",
+            "list": [
+                {
+                    "id": 1,
+                    "name": "Holiday Resort",
+                    "price": 1245,
+                    "address": "9800 Queensway Boulevard",
+                    "img": "https://drive.google.com/uc?id=12qCNYZ3v7v04GmQKoKMUXY6LdP-j9zrl"
+                },
+                {
+                    "id": 2,
+                    "name": "Sheriton Resort Villa",
+                    "price": 1600,
+                    "address": "3301 Robert M. Grissom Parkway",
+                    "img": "https://drive.google.com/uc?id=149aosJaZGeGO8hnooBgBvOrFQpgnjTN9"
+                },
+                {
+                    "id": 3,
+                    "name": "Embassy Suits Resort",
+                    "price": 1250,
+                    "address": "1112 Myrtle road",
+                    "img": "https://drive.google.com/uc?id=1IpvVBxG8RADYw77MhcydZboW5eCd8aQw"
+                },
+                {
+                    "id": 4,
+                    "name": "DoubleTree Resort",
+                    "price": 1885,
+                    "address": "https://drive.google.com/uc?id=1BAsGHhq2vsyvQKJ6-KlMfrLgRRg4pjIF",
+                    "img": "https://drive.google.com/uc?id=1ZkFiRqOF1XaH_BjvpnRrfwi6LTfSJ4o9"
+                },
+                {
+                    "id": 5,
+                    "name": "Fairfield Resort",
+                    "price": 2095,
+                    "address": "10231 North Kings Highway",
+                    "img": "https://drive.google.com/uc?id=1VPWK8OfjRzbUuxpXdvHfC1Xhmi3dcoo-"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Apartments",
+            "description": "this is the appartments you can look at it",
+            "img": "https://drive.google.com/uc?id=10ry13jroJJ8KqNxw_hkyF5eZ9r5_A0kF",
+            "list": [
+                {
+                    "id": 1,
+                    "name": "Studio Apartment",
+                    "price": 125.45,
+                    "address": "60 stevenesen road",
+                    "img": "https://drive.google.com/uc?id=1SSqVJop-j0u5o4u6bMLb0IxEfRkxpHLM"
+                },
+                {
+                    "id": 2,
+                    "name": "Loft Apartment",
+                    "price": 126.45,
+                    "address": "61 stevenesen road",
+                    "img": "https://drive.google.com/uc?id=12C8KILH78Xt5qIZ6iO8me8ZY3AlVnvDN"
+                },
+                {
+                    "id": 3,
+                    "name": "Penthouse Apartment",
+                    "price": 127.45,
+                    "address": "62 stevenesen road",
+                    "img": "https://drive.google.com/uc?id=1O8ng5yvswW2Wdq8XQkzXDpG5WuOd_Tqu"
+                },
+                {
+                    "id": 4,
+                    "name": "Large Family Apartment",
+                    "price": 128.45,
+                    "address": "63 stevenesen road",
+                    "img": "https://drive.google.com/uc?id=1D1TNwEGjkuL1INxcBH8rY0Bspj3TCO2B"
+                },
+                {
+                    "id": 5,
+                    "name": "Boho Apartment",
+                    "price": 129.45,
+                    "address": "64 stevenesen road",
+                    "img": "https://drive.google.com/uc?id=1291XurYGsg-5V36L7Bm-7t_PMoARPsmM"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Hotels",
+            "description": "this is the hotels you can look at it",
+            "img": "https://drive.google.com/uc?id=12-mFKH8B4PZwqfXXNmHQHALilVtfryRZ",
+            "list": [
+                {
+                    "id": 1,
+                    "name": "Element Hotel",
+                    "price": 145,
+                    "address": "6170 Highway 7",
+                    "img": "https://drive.google.com/uc?id=1eylEIowZ_xjquXjNj_KMAcbK5cRRJG1j"
+                },
+                {
+                    "id": 2,
+                    "name": "Courtyard Hotel",
+                    "price": 139,
+                    "address": "150 Interchange Way",
+                    "img": "https://drive.google.com/uc?id=12-mFKH8B4PZwqfXXNmHQHALilVtfryRZ"
+                },
+                {
+                    "id": 3,
+                    "name": "Pinnacle Hotel",
+                    "price": 141,
+                    "address": "1133 West Hastings Street",
+                    "img": "https://drive.google.com/uc?id=1sIGgpC0V4-g3YcmeTfzKhuSKx9DguIU2"
+                },
+                {
+                    "id": 4,
+                    "name": "Victorian Hotel",
+                    "price": 159,
+                    "address": "514 Homer Street",
+                    "img": "https://drive.google.com/uc?id=1d1fjZw2Ug1JIzJn64--uZeT8fH9Do-9J"
+                },
+                {
+                    "id": 5,
+                    "name": "Atrium Inn",
+                    "price": 189,
+                    "address": "2889 East Hastings Street",
+                    "img": "https://drive.google.com/uc?id=10EybcSiIduUjqQ8LznD5Hv5aEhfhP9Zt"
+                }
+            ]
+        }
+    ],
+    "property_description": [
+        {
+            "id": 1,
+            "address": "2889 East Hastings Street",
+            "name": " Atrium Inn",
+            "price": 189,
+            "img": "https://drive.google.com/uc?id=10EybcSiIduUjqQ8LznD5Hv5aEhfhP9Zt"
+        },
+        {
+            "id": 2,
+            "address": "12  road",
+            "name": "Boho Apartment",
+            "price": 1700,
+            "img": "https://drive.google.com/uc?id=1d1fjZw2Ug1JIzJn64--uZeT8fH9Do-9J"
+        },
+        {
+            "id": 3,
+            "address": "72 Starthill",
+            "name": "Starhill Hotel",
+            "price": 1521,
+            "img": "https://drive.google.com/uc?id=1sIGgpC0V4-g3YcmeTfzKhuSKx9DguIU2"
+        },
+        {
+            "id": 4,
+            "address": "1348 Robson Street",
+            "name": "Barclay Apartments",
+            "price": 153.01,
+            "img": "https://drive.google.com/uc?id=12-mFKH8B4PZwqfXXNmHQHALilVtfryRZ"
+        }
+    ]
+}

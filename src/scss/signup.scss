@@ -1,0 +1,26 @@
+#mid-wrap{
+    // height: calc(100vh - 50px);  
+    // z-index: 1;
+    // position: relative;
+    // //color:white;
+    // font-weight:bolder;
+    
+    background-image: url("../assets/images/background.jpg");
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.form1{
+    //background-color: rgb(99, 100, 94);
+    margin-bottom: 150px;
+    margin-right: 900px;
+    width: 30rem;
+    height: 30rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px); 
+}
+

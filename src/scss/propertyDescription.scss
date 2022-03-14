@@ -1,0 +1,106 @@
+.property{
+    .prize{
+            position: relative;
+            display: flex;
+            width: 100%;
+            margin-top: 10px;
+            height: 100px;
+            .desc{
+            h3{
+                margin-left: 8px;
+                font-size: 50px;
+                padding-left: 5px;
+            }
+            p{
+                margin-left: 18px;
+                margin-top: -13px;
+                font-size: 13px;
+            }
+        }
+        
+
+    }
+    .description{
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        position: relative;
+        .desc1{
+            position: absolute;
+            // top:30%;
+            top: 85%;
+            left : 80%
+        }
+        .image{
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 50%;
+            height:300px;
+            position: relative;
+            img{
+                border-radius: 10px;
+                position: absolute;
+                width :100%;
+                height : 100%;
+            }
+        }
+        .information{
+            margin-top: 20px;
+            margin-left: 30PX;
+            width : 30%;
+            .location{
+                width: 100%;
+               
+                img{
+                    height: 250px;
+                    width: 100%;
+                    border-radius: 8px;
+                }
+                p{
+                    margin-top: 15px;
+                    margin-left: 10px;
+                }
+                // width: 100%;
+                
+            }
+            
+        }
+
+    }
+    .review{
+        margin-top: 50px;
+        margin-left: 20px;
+        .rv{
+            font-size:x-large;
+        }
+            .rating{
+                display: flex;
+                .badge{
+                    height: 20px;
+                    font-size: 10px;
+                    align-items: center;
+                    text-align: center;
+                }
+                .text{
+                    margin-left: 5px;
+                    margin-top: -5px;
+                    p{
+                        font-size: 12px;
+                        margin-top: -5px;
+                    }
+
+                }
+            }
+            .customerreview{
+            .customer{
+                p{
+                    font-size: 12px;
+                }
+                #date{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+}
