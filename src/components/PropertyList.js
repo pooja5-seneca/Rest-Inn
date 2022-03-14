@@ -46,7 +46,7 @@ const PropertyList = () => {
 
     return (
         <div className='property'>
-            <h3 className='bg-light'>Property Section</h3>
+            <h3 className='bg-light'>Property Type Section</h3>
             {(
                 () => {
                     let count = 0;
