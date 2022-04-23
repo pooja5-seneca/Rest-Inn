@@ -2,26 +2,17 @@ import React from 'react';
 import '../scss/properties.scss'
 import PropertyContainer from './PropertyContainer';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-const Properties = (props) => {
+const Properties = ({ setData, data }) => {
+    let params = useParams()
     let a = [];
     let count = 0;
-    const [data, setData] = useState([{
-        "id": 0,
-        name: "",
-        description: "",
-        list: []
-    }
-    ])
-    useEffect(() => {
-        fetch("http://localhost:5000/property_list").then(response => response.json()).then(json => {
-            json.forEach(element => {
-                element.list.forEach(e1 => {
-                    a.push(e1);
-                });
-            });
-            setData(a);
 
+    useEffect(() => {
+        let url = (params.data) ? "http://localhost:5000/properties/" + params.data : "http://localhost:5000/properties"
+        fetch(url).then(response => response.json()).then(json => {
+            setData(json);
         }).catch(err => {
             console.log(err);
         })

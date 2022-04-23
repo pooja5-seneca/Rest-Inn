@@ -1,12 +1,13 @@
 import React from 'react';
 import '../scss/filteredData.scss'
 import PropertyContainer from './PropertyContainer';
+import { useState, useEffect } from 'react';
 
 const FilteredData = (props) => {
     return (
         <div className='filtered'>
             <div className='sort '>
-                <h3>Resort Name</h3>
+
                 <div className='sortby'>
                     <p className='para'><b>sort by</b></p>
                     <div className='dropdown'><button className="btn btn-secondary" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" >Featured</button></div>
@@ -44,11 +45,13 @@ const FilteredData = (props) => {
                 </div>
             </div>
             <div className='result'>
-                {props.data[0].list?.map((element, key) => (
-                    <div key={key}>
-                        <PropertyContainer element={element} />
-                    </div>
-                ))}
+                {props.data.map((element, key) => {
+                    return (
+                        <div key={key}>
+                            <PropertyContainer element={element} />
+                        </div>
+                    )
+                })}
             </div>
 
         </div>

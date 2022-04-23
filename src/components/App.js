@@ -14,6 +14,8 @@ import PropertyDescriptionPage from '../pages/PropertyDescriptionPage';
 import PropertyPage from '../pages/PropertyPage';
 import ContactUsPage from '../pages/ContactUsPage';
 import About from './About';
+import Dashboard from './Dashboard';
+import { Logout } from '../pages/Logout';
 // import Login from './Login';
 // import Signup from './Signup';
 
@@ -23,13 +25,17 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="property-listing/:id" element={<PropertyListing />} />
+        <Route path='/logout' element={<Logout />} />
+        <Route path="/property-listing/:type" element={<PropertyListing />} />
+        <Route path="/property-listing" element={<PropertyListing />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/contactus" element={<ContactUsPage />} />
-        <Route path="properties" element={<PropertyPage />} />
-        <Route path="propertyDescription/:id" element={<PropertyDescriptionPage />} />
+        <Route path="/properties" element={<PropertyPage />} />
+        <Route path="/properties/:data" element={<PropertyPage />} />
+        <Route path="/propertyDescription/:id" element={<PropertyDescriptionPage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
 
 

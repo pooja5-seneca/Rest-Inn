@@ -4,12 +4,14 @@ import BestsellerList from '../components/BestsellerList';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
+import { useState } from 'react';
 
 
 export const HomePage = () => {
+    const [data, setData] = useState("")
     return (
         <div>
-            <Header />
+            <Header setData={setData} />
             <Hero />
             <PropertyList />
             <BestsellerList />

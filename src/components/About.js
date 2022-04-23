@@ -1,11 +1,18 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { useState, useEffect } from 'react';
 
 export const About = () => {
+    const [data, setData] = useState([{
+        "id": 0,
+        "name": "",
+        "description": "",
+        "list": []
+    }]);
     return (
         <div>
-            <Header />
+            <Header setData={setData} />
             <div id="mid-wrap">
                 <div class="container">
                     <h4 class="display-4 text-center">About Us</h4>

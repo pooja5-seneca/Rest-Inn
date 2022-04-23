@@ -24,29 +24,18 @@ const PropertyList = () => {
         "description": "",
         "list": []
     }]);
-    //let count = 0;
     useEffect(() => {
-        fetch("http://localhost:5000/property_list").then(response => response.json()).then(json => {
+        fetch("http://localhost:5000/propertiesTypeSection").then(response => response.json()).then(json => {
+
             setData(json)
         }).catch(err => {
             console.log(err);
         })
     }, []);
-    // let abc = [
-    //     { img: img1, name: "condo" },
-    //     { img: img1, name: "condo" },
-    //     { img: img1, name: "condo" },
-    //     { img: img1, name: "condo" },
-    //     { img: img1, name: "condo" },
-    //     { img: img1, name: "condo" },
-    //     { img: img1, name: "condo" },
-    //     { img: img1, name: "condo" },
-    //     { img: img1, name: "condo" }
-    // ]
 
     return (
         <div className='property'>
-            <h3 className='bg-light'>Property Type Section</h3>
+            <h3 className='bg-light'>Property Category Section</h3>
             {(
                 () => {
                     let count = 0;
@@ -56,7 +45,8 @@ const PropertyList = () => {
                             {data.slice(count, count + 5).map((element) => {
 
                                 return (
-                                    <Property id={element.id} img={element.img} name={element.name} />
+                                    <Property id={element.propertyId} img={element.propertyImg}
+                                        name={element.propertyType} type={element.propertyType} description={element.propertyDesc} />
                                 )
                             })
                             }

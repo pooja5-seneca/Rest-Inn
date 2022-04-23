@@ -20,7 +20,7 @@ const _rowCount = (variable) => {
 const BestsellerList = () => {
     const [data, setData] = useState([{ id: 0, name: "", address: "" }])
     useEffect(() => {
-        fetch("http://localhost:5000/property_description").then(response => response.json()).then(json => {
+        fetch("http://localhost:5000/propertiesBestseller?bestseller=true").then(response => response.json()).then(json => {
             setData(json);
         }).catch(err => {
             console.log(err);
@@ -40,7 +40,9 @@ const BestsellerList = () => {
                             {data.slice(count, count + 5).map((element) => {
 
                                 return (
-                                    <Bestseller id={element.id} img={element.img} name={element.name} key={element.id} />
+                                    // <Bestseller id={element.id} img={element.img} name={element.name} key={element.id} />
+                                    <Bestseller id={element.propertyId} img={element.propertyImg}
+                                        name={element.propertyTitle} type={element.propertyType} />
                                 )
                             })
                             }

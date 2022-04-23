@@ -6,28 +6,37 @@ import { useParams } from 'react-router-dom';
 import Filter from './Filter';
 import Header from './Header.js';
 import Footer from './Footer.js';
+import { useLocation } from 'react-router-dom';
+import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils';
 
 const PropertyListing = () => {
     let params = useParams();
     const [data, setData] = useState([{
-        "id": 0,
-        name: "",
-        description: "",
-        list: []
+        propertyId: "",
+        propertyImg: "",
+        propertyTitle: "",
+        propertyDesc: "",
+        propertyPrice: "",
+        propertyLocation: { streetAddress: "", city: "", state: "", country: "", zip: "" },
+        propertyType: "",
+        propertyRules: "",
+        propertyAmenities: "",
+        bestseller: false
     }
     ])
+
     useEffect(() => {
-        fetch("http://localhost:5000/property_list").then(response => response.json()).then(json => {
-            let abc = json.filter((element) => element.id == parseInt(params.id))
-            setData(abc);
+        fetch("http://localhost:5000/properties/" + params.type).then(response => response.json()).then(json => {
+            setData(json);
         }).catch(err => {
             console.log(err);
         })
 
     }, [])
+
     return (
         <div>
-            <header><Header /></header>
+            <header><Header setData={setData} /></header>
             <main>
                 <div className='parent'>
                     <Filter />
