@@ -1,7 +1,32 @@
 import React from 'react';
 import '../scss/signup.scss';
+import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const Signup = () => {
+    const [login, setLogin] = useState(true);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const navigation = useNavigate()
+    const handleClick = () => {
+        let result = { name, email, password }
+        fetch("http://localhost:5000/customer/registration", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(result)
+        }).then(response => {
+            if (response.status !== 200) {
+                setLogin(false)
+            }
+            else {
+                navigation("/login")
+            }
+
+        }
+
+        )
+    }
     return (
         <div id="mid-wrap">
             <br />
@@ -14,19 +39,19 @@ const Signup = () => {
                                 <h2>Signup </h2>
                                 <br />
                             </div>
-                            <form method="post" action="/register">
-                                <label for="name" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="i.e. Smith, John" />
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Your Email Address" />
-                                <label for="email" class="form-label">Confirm Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Confirm Your Email Address" />
-                                <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" placeholder="Your Address" />
-                                <div class="mb-4 text-center p-2">
-                                    <button type="submit" class="btn btn-success">Register</button>
-                                </div>
-                            </form>
+
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="i.e. Smith, John" onChange={(e) => setName(e.target.value)} />
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email Address" onChange={(e) => setEmail(e.target.value)} />
+                            <label for="password" class="form-label">password</label>
+                            <input type="password" class="form-control" id="password" placeholder="password" onChange={(e) => setPassword(e.target.value)} />
+                            <label for="address" class="form-label">confirm password</label>
+                            <input type="password" class="form-control" id="cpassword" placeholder="confirm password" />
+                            <div class="mb-4 text-center p-2">
+                                <button type="submit" class="btn btn-success" onClick={handleClick}>Register</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>

@@ -1,25 +1,32 @@
-.navbar{
+.navbar {
+
     //overflow-x: hidden;
-    .navbar-nav{
-        margin-left: 5%;   
+    .navbar-nav {
+        margin-left: 5%;
     }
-    .container-fluid{
-        .m{
-            img{
+
+    .container-fluid {
+        .m {
+            img {
                 width: 70px;
                 height: 50px;
             }
         }
-    .collapse{
-        form{
-            margin-left: 10%;
-        }
-        ul{
-            li{
-                .dropdown{
-                    
-                    .dropbtn{
-                        font-size: 16px;  
+
+        .collapse {
+            .form {
+                display: flex;
+                margin-left: 10%;
+            }
+
+            ul {
+                li {
+                    float: right;
+                    align-items: flex-end;
+                    margin-right: 10%;
+
+                    .dropbtn1 {
+                        font-size: 16px;
                         border: none;
                         outline: none;
                         color: rgb(155, 151, 151);
@@ -27,38 +34,58 @@
                         background-color: inherit;
                         font-family: inherit;
                         margin: 0;
+                        margin-left: 150px;
                     }
-                    .dropdown-content {
-                        display: none;
-                        position: absolute;
-                        background-color: #f9f9f9;
-                        min-width: 160px;
-                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                        z-index: 1;
-                        a {
-                            float: none;
-                            color: black;
-                            padding: 10px 16px;
-                            text-decoration: none;
-                            display: block;
-                            text-align: left;
-                          }
-                          a:hover {
-                            background-color: rgb(206, 199, 199);
-                          }
-                        
-                      }
-                    
-                }
-                .dropdown:hover{
-                    .dropdown-content {
-                        
-                        display: block;
-                      }
 
+                    .dropdown {
+
+                        .dropbtn {
+                            font-size: 16px;
+                            border: none;
+                            outline: none;
+                            color: rgb(155, 151, 151);
+                            padding: 10px 16px;
+                            background-color: inherit;
+                            font-family: inherit;
+                            margin: 0;
+                            margin-left: 150px;
+                        }
+
+                        .dropdown-content {
+                            display: none;
+                            position: absolute;
+                            background-color: #f9f9f9;
+                            min-width: 160px;
+                            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                            z-index: 1;
+                            margin-left: 150px;
+
+                            a {
+                                float: none;
+                                color: black;
+                                padding: 10px 16px;
+                                text-decoration: none;
+                                display: block;
+                                text-align: left;
+                            }
+
+                            a:hover {
+                                background-color: rgb(206, 199, 199);
+                            }
+
+                        }
+
+                    }
+
+                    .dropdown:hover {
+                        .dropdown-content {
+
+                            display: block;
+                        }
+
+                    }
                 }
             }
         }
-    }
     }
 }

@@ -2,19 +2,24 @@ import React from 'react';
 import '../scss/propertyContainer.scss';
 import { Link } from 'react-router-dom';
 //import img1 from '../assets/images/1.jpg'
+import { useState, useEffect } from 'react';
 
 const PropertyContainer = (props) => {
+    const [data, setData] = useState({ "id": "" })
+    useEffect(() => {
+        setData(props.element)
+    }, []);
     return (
         <div>
             <div className="card   "  >
                 <div className='row'>
                     <div className='col-4'>
-                        <img className="card-img" src={props.element.img} alt="Card image cap" />
+                        <img className="card-img" src={props.element.propertyImg} alt="Card image cap" />
                     </div>
                     <div className='col-4'>
                         <div className="card-body">
                             <div className='name'>
-                                <h5 className="card-title">{props.element.name}</h5><p>{props.element.address}</p>
+                                <h5 className="card-title">{props.element.propertyTitle}</h5>
                             </div>
                             <div className='keypoint'>
                                 <h6>Pros:</h6>
@@ -31,9 +36,9 @@ const PropertyContainer = (props) => {
                     </div>
                     <div className='col-4'>
                         <div className='goto'>
-                            <span className='price'><b> {props.element.price}</b></span>
+                            <span className='price'><b> {props.element.propertyPrice}</b></span>
                             <p className='text-success'>free cancellation</p>
-                            <Link to={`/property-listing/${props.element.id}`} className="btn btn-primary rounded-pill">Book Now </Link>
+                            <Link to={`/propertyDescription/${props.element.propertyId}`} className="btn btn-primary rounded-pill">Book Now </Link>
                         </div>
                     </div>
 
