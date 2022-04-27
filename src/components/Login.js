@@ -11,7 +11,7 @@ const Login = () => {
     const navigation = useNavigate()
     const handleClick = () => {
         let result = { email, password };
-        fetch("http://localhost:5000/customer/login", {
+        fetch("https://restinn-hotel-booking.herokuapp.com/customer/login", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(result)
@@ -34,10 +34,10 @@ const Login = () => {
         <div id="mid-wrap" >
             <br />
 
-            <div class="col-md-4 offset-md-4 form2">
-                <div class=" border border-dark rounded-3">
-                    <div class="p-5">
-                        <div class="text-center">
+            <div className="col-md-4 offset-md-4 form2">
+                <div className=" border border-dark rounded-3">
+                    <div className="p-5">
+                        <div className="text-center">
                             <h2> Login</h2>
                         </div>
                         <div className='form'>
@@ -48,15 +48,15 @@ const Login = () => {
                                     </>
                                 ) : ""
                             }
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Your Email Address" onChange={(e) => { setUserName(e.target.value) }} />
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Your Password" onChange={(e) => { setPassword(e.target.value) }} />
-                            <div class="mb-4 text-center p-5 ">
-                                <button type="submit" class="btn btn-success" onClick={handleClick}>Login</button>
+                            <label htmlFor="email" className="form-label">Email</label>
+                            <input type="email" className="form-control" id="email" placeholder="Your Email Address" onChange={(e) => { setUserName(e.target.value) }} />
+                            <label htmlFor="password" className="form-label">Password</label>
+                            <input type="password" className="form-control" id="password" placeholder="Your Password" onChange={(e) => { setPassword(e.target.value) }} />
+                            <div className="mb-4 text-center p-5 ">
+                                <button type="submit" className="btn btn-success" onClick={handleClick}>Login</button>
                             </div>
                         </div>
-                        <div class="text-center"><a href="/forgotpassword"> Forgot Your Password? </a></div>
+                        <div className="text-center"><a href="/forgotpassword"> Forgot Your Password? </a></div>
                     </div>
                 </div>
             </div>

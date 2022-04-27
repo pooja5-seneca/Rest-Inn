@@ -6,10 +6,16 @@ import { useState } from 'react';
 
 function PropertyPage() {
     const [data, setData] = useState([{
-        "id": 0,
-        name: "",
-        description: "",
-        list: []
+        propertyId: "",
+        propertyImg: "",
+        propertyTitle: "",
+        propertyDesc: "",
+        propertyPrice: "",
+        propertyLocation: { streetAddress: "", city: "", state: "", country: "", zip: "" },
+        propertyType: "",
+        propertyRules: "",
+        propertyAmenities: "",
+        bestseller: false
     }
     ])
     return (

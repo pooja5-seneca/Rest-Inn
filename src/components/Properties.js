@@ -8,9 +8,11 @@ const Properties = ({ setData, data }) => {
     let params = useParams()
     let a = [];
     let count = 0;
+    let c = 0;
+
 
     useEffect(() => {
-        let url = (params.data) ? "http://localhost:5000/properties/" + params.data : "http://localhost:5000/properties"
+        let url = (params.data) ? "https://restinn-hotel-booking.herokuapp.com/properties/" + params.data.toLowerCase() : "https://restinn-hotel-booking.herokuapp.com/properties"
         fetch(url).then(response => response.json()).then(json => {
             setData(json);
         }).catch(err => {
@@ -66,12 +68,23 @@ const Properties = ({ setData, data }) => {
                     </div>
                 ))} */}
                 {
-                    data.map((element1) => {
-                        return (
-                            <PropertyContainer element={element1} />
-                        );
+                    (data[0].propertyId !== "") ? (
+                        <div className='container border'>
 
-                    })
+                            {
+
+                                data.map((element1) => {
+                                    return (
+                                        <PropertyContainer element={element1} key={++c} />
+                                    );
+
+                                })
+                            }
+                        </div>) : (<>
+                            <h3 style={{ "marginLeft": "290px", "marginTop": "20px", "marginBottom": "180px" }}>There is no property {params.data}</h3>
+                            <br />
+                        </>)
+
                 }
             </div>
 
