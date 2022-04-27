@@ -18,9 +18,10 @@ const _rowCount = (variable) => {
 }
 
 const BestsellerList = () => {
+    let c = 0
     const [data, setData] = useState([{ id: 0, name: "", address: "" }])
     useEffect(() => {
-        fetch("http://localhost:5000/propertiesBestseller?bestseller=true").then(response => response.json()).then(json => {
+        fetch("https://restinn-hotel-booking.herokuapp.com/propertiesBestseller?bestseller=true").then(response => response.json()).then(json => {
             setData(json);
         }).catch(err => {
             console.log(err);
@@ -29,20 +30,20 @@ const BestsellerList = () => {
     }, [])
 
     return (
-        <div className='bestseller'>
+        <div className='bestseller' >
             <h3 className='bg-light'>Bestseller Section</h3>
             {(
                 () => {
                     let count = 0;
                     let x = [];
                     for (let i = 0; i < _rowCount(data); i++) {
-                        x.push(<div className='row'>
+                        x.push(<div className='row' key={i}>
                             {data.slice(count, count + 5).map((element) => {
 
                                 return (
                                     // <Bestseller id={element.id} img={element.img} name={element.name} key={element.id} />
                                     <Bestseller id={element.propertyId} img={element.propertyImg}
-                                        name={element.propertyTitle} type={element.propertyType} />
+                                        name={element.propertyTitle} type={element.propertyType} key={++c} />
                                 )
                             })
                             }

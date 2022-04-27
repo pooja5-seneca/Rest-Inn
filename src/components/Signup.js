@@ -11,7 +11,7 @@ const Signup = () => {
     const navigation = useNavigate()
     const handleClick = () => {
         let result = { name, email, password }
-        fetch("http://localhost:5000/customer/registration", {
+        fetch("https://restinn-hotel-booking.herokuapp.com/customer/registration", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(result)

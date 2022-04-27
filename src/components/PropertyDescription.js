@@ -21,7 +21,7 @@ const PropertyDescription = () => {
     }
     )
     useEffect(() => {
-        fetch("http://localhost:5000/property/" + params.id).then(response => response.json()).then(json => {
+        fetch("https://restinn-hotel-booking.herokuapp.com/property/" + params.id).then(response => response.json()).then(json => {
             setData(json);
         }).catch(err => {
             console.log(err);

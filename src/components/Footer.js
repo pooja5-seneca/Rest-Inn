@@ -38,7 +38,7 @@ const Footer = () => {
                     <a href="#"><FaTwitterSquare size='2rem' /></a>
                     <a href="#"><FaSnapchat size='2rem' /></a>
                     <a href="#"><FaInstagram size='2rem' /></a>
-                    <p class="copyright">Airbnb © 2000</p>
+                    <p className="copyright">Airbnb © 2000</p>
                 </div>
             </div>
 

@@ -18,6 +18,7 @@ const _rowCount = (variable) => {
 }
 
 const PropertyList = () => {
+    let c = 0;
     const [data, setData] = useState([{
         "id": 0,
         "name": "",
@@ -25,7 +26,7 @@ const PropertyList = () => {
         "list": []
     }]);
     useEffect(() => {
-        fetch("http://localhost:5000/propertiesTypeSection").then(response => response.json()).then(json => {
+        fetch("https://restinn-hotel-booking.herokuapp.com/propertiesTypeSection").then(response => response.json()).then(json => {
 
             setData(json)
         }).catch(err => {
@@ -34,19 +35,18 @@ const PropertyList = () => {
     }, []);
 
     return (
-        <div className='property'>
+        <div className='property' >
             <h3 className='bg-light'>Property Category Section</h3>
             {(
                 () => {
                     let count = 0;
                     let x = [];
                     for (let i = 0; i < _rowCount(data); i++) {
-                        x.push(<div className='row'>
+                        x.push(<div className='row' key={i}>
                             {data.slice(count, count + 5).map((element) => {
-
                                 return (
                                     <Property id={element.propertyId} img={element.propertyImg}
-                                        name={element.propertyType} type={element.propertyType} description={element.propertyDesc} />
+                                        name={element.propertyType} type={element.propertyType} description={element.propertyDesc} key={(c++).toString()} />
                                 )
                             })
                             }
